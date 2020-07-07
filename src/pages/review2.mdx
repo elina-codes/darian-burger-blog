@@ -13,7 +13,7 @@ import ReviewSectionNeeds from "../components/reviews/section-needs"
 import ReviewSectionNeedsPartial from "../components/reviews/section-needs-partials"
 import ReviewSectionSteps from "../components/reviews/section-steps"
 import ReviewSectionTips from "../components/reviews/section-tips"
-import ReviewSectionResources from "../components/reviews/section-resources"
+import { averageRating, ratingsList } from '../components/common/helpers';
 
 export const currentReview = reviews.review2
 
@@ -23,8 +23,12 @@ import SEO from "../components/seo"
   <SEO title={props.pageContext.frontmatter.title} />
   <ReviewSectionIntro>
     <p>Before we talk about Qualitative Surveys, it’s important to know what Surveys are in general.</p>
-    <p>Surveys are questions, often bundled in sets, that are distributed to users so they can answer questions about their behavior, background, or opinions. Surveys are typically unmoderated, quick, cheap, and a relatively easy way to get responses from a large sample size of your users with less effort than a full out Usability Test. You can also distribute them in a variety of ways. Surveys can be quantitative, qualitative, or a mix of both.</p>
-    <p>For this review, we are going to talk about Qualitative Surveys, but you can find information on Quantitative Surveys <Link to="/surveys-quantitative">here</Link>.</p>
+    <p>
+      <ul>
+        {ratingsList(currentReview.ratings)}
+      </ul>
+    </p>
+    <p><strong>Average score: {averageRating(currentReview.ratings)}</strong></p>
   </ReviewSectionIntro>
 <ReviewSectionWhatIs review={currentReview} title="What is a Qualitative Survey?">
   <p>
@@ -244,7 +248,5 @@ import SEO from "../components/seo"
     </li>
   </ul>
 </ReviewSectionTips>
-
-<ReviewSectionResources review={currentReview} />
 
 </ReviewLayout>

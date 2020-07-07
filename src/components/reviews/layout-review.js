@@ -12,7 +12,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import Header from '../common/header';
 import Footer from '../common/footer';
 import ReviewLayoutBanner from './section-topbanner';
-import MoreProjects from './section-more-reviews';
+import MoreReviews from './section-more-reviews';
 
 import '../layout.scss';
 import './layout-review.scss';
@@ -34,7 +34,7 @@ const ReviewLayout = ({ pageTitle, review, children }) => {
       <main className="review-layout">
         <ReviewLayoutBanner pageTitle={pageTitle} />
         {children}
-        <MoreProjects project={review} />
+        <MoreReviews project={review} />
       </main>
       <Footer />
     </>

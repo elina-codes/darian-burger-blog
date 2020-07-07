@@ -13,43 +13,6 @@ import review1_third from '../images/reviews/burger3.jpg';
 import review2_third from '../images/reviews/burger1.jpg';
 import review3_third from '../images/reviews/burger2.jpg';
 
-/*
-ex:
-  ux_review_name: {
-    title: "Review title",
-    url: "/url-for-page",
-    images: {
-      main: {
-        src: variable_name_for_image_declared_above,
-        alt: "Alt text to appear with image"
-      },
-      second: {
-        src: variable_name_for_image_declared_above,
-        alt: "Alt text to appear with image"
-      },
-      third: {
-        src: variable_name_for_image_declared_above,
-        alt: "Alt text to appear with image"
-      }
-    },
-    resources: [
-      {
-        source: "Name of the resource (REQUIRED)",
-        url: "https://self.explanatory.com (REQUIRED)"",
-        title: "Title to be linkified",
-        notes: "(extra notes to follow the link)",
-      },
-      {
-        source: "Name of the resource (REQUIRED)",
-        url: "https://self.explanatory.com (REQUIRED)"",
-        title: "Title to be linkified",
-        notes: "(extra notes to follow the link)",
-      }
-    ]
-  }
-
-
-*/
 const reviews = {
   review1: {
     title: 'Burger Review 1',
@@ -68,18 +31,13 @@ const reviews = {
         alt: 'Close up of fries'
       }
     },
-    resources: [
-      {
-        source: 'UX Planet',
-        url: 'https://uxplanet.org/the-magic-of-paper-prototyping-51693eac6bc3',
-        title: 'The Magic of Paper Prototyping'
-      },
-      {
-        source: 'inVision',
-        url: 'https://www.invisionapp.com',
-        notes: '(a great tool for digital prototyping)'
-      }
-    ]
+    ratings: {
+      appearance: 10,
+      taste: 8,
+      mess: 7,
+      fries: 8,
+      price: 7
+    }
   },
   review2: {
     title: 'Burger Review 2',
@@ -98,18 +56,12 @@ const reviews = {
         alt: 'Close up of fries'
       }
     },
-    resources: [
-      {
-        source: 'hotjar',
-        url: 'https://www.hotjar.com/blog/open-ended-questions/#what-are-open-ended-questions',
-        title: 'Open-ended vs. closed-ended questions: how to survey your users'
-      },
-      {
-        source: 'UX Planet',
-        url: 'https://uxplanet.org/this-is-all-you-need-to-know-to-conduct-a-ux-survey-50400af45920',
-        title: 'This is all you need to know to conduct a UX Survey'
-      }
-    ]
+    ratings: {
+      appearance: 10,
+      taste: 10,
+      mess: 10,
+      price: 10
+    }
   },
   review3: {
     title: 'Burger Review 3',
@@ -128,18 +80,13 @@ const reviews = {
         alt: 'Close up of fries'
       }
     },
-    resources: [
-      {
-        source: 'Wikipedia',
-        url: 'https://en.wikipedia.org/wiki/Competitor_analysis',
-        title: 'Competitor analysis'
-      },
-      {
-        source: 'Usability Geek',
-        url: 'https://usabilitygeek.com/how-to-do-ux-competitor-analysis/',
-        title: 'How To Do A UX Competitor Analysis: A Step By Step Guide'
-      }
-    ]
+    ratings: {
+      appearance: 8,
+      taste: 8,
+      mess: 5,
+      fries: 7,
+      price: 5
+    }
   }
 };
 

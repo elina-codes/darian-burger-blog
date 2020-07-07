@@ -7,12 +7,13 @@ import { Link } from "gatsby"
 
 import reviews from "../data/reviews"
 import ReviewLayout from "../components/reviews/layout-review"
+import ReviewSectionIntro from "../components/reviews/section-intro"
 import ReviewSectionWhatIs from "../components/reviews/section-whatis"
 import ReviewSectionNeeds from "../components/reviews/section-needs"
 import ReviewSectionNeedsPartial from "../components/reviews/section-needs-partials"
 import ReviewSectionSteps from "../components/reviews/section-steps"
 import ReviewSectionTips from "../components/reviews/section-tips"
-import ReviewSectionResources from "../components/reviews/section-resources"
+import { averageRating, ratingsList } from '../components/common/helpers';
 
 import SEO from "../components/seo"
 
@@ -20,6 +21,14 @@ export const currentReview = reviews.review3
 
 <ReviewLayout pageTitle={props.pageContext.frontmatter.title} review={currentReview}>
   <SEO title={props.pageContext.frontmatter.title} />
+  <ReviewSectionIntro>
+    <p>
+      <ul>
+        {ratingsList(currentReview.ratings)}
+      </ul>
+    </p>
+    <p><strong>Average score: {averageRating(currentReview.ratings)}</strong></p>
+  </ReviewSectionIntro>
 
 <ReviewSectionWhatIs
   review={currentReview}
@@ -132,7 +141,5 @@ export const currentReview = reviews.review3
     </li>
   </ul>
 </ReviewSectionTips>
-
-<ReviewSectionResources review={currentReview} />
 
 </ReviewLayout>
