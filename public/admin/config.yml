@@ -4,86 +4,57 @@ backend:
 
 publish_mode: editorial_workflow
 
-media_folder: "static/images/uploads" # Media files will be stored in the repo under static/images/uploads
-public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
+media_folder: 'static/images/uploads' # Media files will be stored in the repo under static/images/uploads
+public_folder: '/images/uploads' # The src attribute for uploaded media will begin with /images/uploads
 
 collections:
-  - name: "methods"
-    label: "UX Methods"
-    label_singular: "UX Method"
-    folder: "content/methods"
+  - name: 'methods'
+    label: 'Burger Reviews'
+    label_singular: 'Burger Review'
+    folder: 'content/reviews'
     create: true
-    slug: "{{slug}}"
-    preview_path: "{{slug}}"
+    slug: '{{slug}}'
+    preview_path: '{{slug}}'
     fields:
-      - { label: "Method Title", name: "title", widget: "string" }
-      - { label: "Featured Image", name: "thumbnail", widget: "image" }
-      - { label: "Intro", name: "intro", widget: "markdown", required: false }
-      - label: "Definition"
-        name: "definition"
-        widget: "object"
+      - { label: 'Review Title', name: 'title', widget: 'string' }
+      - { label: 'Featured Image', name: 'thumbnail', widget: 'image' }
+      - { label: 'Intro', name: 'intro', widget: 'markdown', required: false }
+      - label: 'Definition'
+        name: 'definition'
+        widget: 'object'
         fields:
-          - {
-              label: "Title",
-              name: "definition-title",
-              widget: "string",
-              default: "What is a {{title}}?",
-            }
-          - { label: "Text", name: "definition-text", widget: "markdown" }
-          - { label: "Image", name: "definition-image", widget: image }
-      - label: "Needs"
-        name: "needs"
-        widget: "object"
+          - { label: 'Title', name: 'definition-title', widget: 'string', default: 'What is a {{title}}?' }
+          - { label: 'Text', name: 'definition-text', widget: 'markdown' }
+          - { label: 'Image', name: 'definition-image', widget: image }
+      - label: 'Needs'
+        name: 'needs'
+        widget: 'object'
         fields:
-          - {
-              label: "Title",
-              name: "needs-title",
-              widget: "string",
-              default: "What do you need for a {{title}}?",
-            }
-          - { label: "Time items", name: "needs-time", widget: "markdown" }
-          - {
-              label: "Materials items",
-              name: "needs-materials",
-              widget: "markdown",
-            }
-      - label: "Steps"
-        name: "steps"
-        widget: "object"
+          - { label: 'Title', name: 'needs-title', widget: 'string', default: 'What do you need for a {{title}}?' }
+          - { label: 'Time items', name: 'needs-time', widget: 'markdown' }
+          - { label: 'Materials items', name: 'needs-materials', widget: 'markdown' }
+      - label: 'Steps'
+        name: 'steps'
+        widget: 'object'
         fields:
-          - {
-              label: "Title",
-              name: "steps-title",
-              widget: "string",
-              default: "How do you run a {{title}}?",
-            }
-          - { label: "Image", name: "steps-image", widget: image }
-          - label: "Steps"
-            name: "steps-list"
-            widget: "list"
+          - { label: 'Title', name: 'steps-title', widget: 'string', default: 'How do you run a {{title}}?' }
+          - { label: 'Image', name: 'steps-image', widget: image }
+          - label: 'Steps'
+            name: 'steps-list'
+            widget: 'list'
             fields:
-              - { label: "Title", name: "step-title", widget: "string" }
-              - { label: "Text", name: "step-text", widget: "markdown" }
-      - label: "Tips"
-        name: "tips"
-        widget: "object"
+              - { label: 'Title', name: 'step-title', widget: 'string' }
+              - { label: 'Text', name: 'step-text', widget: 'markdown' }
+      - label: 'Tips'
+        name: 'tips'
+        widget: 'object'
         fields:
-          - {
-              label: "Title",
-              name: "tips-title",
-              widget: "string",
-              default: "Tips for a great {{title}}",
-            }
-          - { label: "Text", name: "tips-text", widget: "markdown" }
-          - { label: "Image", name: "tips-image", widget: image }
-      - label: "Resources"
-        name: "resources"
-        widget: "object"
+          - { label: 'Title', name: 'tips-title', widget: 'string', default: 'Tips for a great {{title}}' }
+          - { label: 'Text', name: 'tips-text', widget: 'markdown' }
+          - { label: 'Image', name: 'tips-image', widget: image }
+      - label: 'Resources'
+        name: 'resources'
+        widget: 'object'
         fields:
-          - {
-              label: "Title",
-              name: "resources-title",
-              widget: "string",
-              default: "More resources for {{title}}",
-            }
-          - { label: "Content", name: "resources-content", widget: "markdown" }
+          - { label: 'Title', name: 'resources-title', widget: 'string', default: 'More resources for {{title}}' }
+          - { label: 'Content', name: 'resources-content', widget: 'markdown' }
