@@ -1,0 +1,250 @@
+---
+path: "/surveys-qualitative"
+title: "Qualitative Surveys"
+---
+
+import { Link } from "gatsby"
+
+import uxMethods from "../data/ux-methods"
+import MethodLayout from "../components/methods/layout-method"
+import MethodSectionIntro from "../components/methods/section-intro"
+import MethodSectionWhatIs from "../components/methods/section-whatis"
+import MethodSectionNeeds from "../components/methods/section-needs"
+import MethodSectionNeedsPartial from "../components/methods/section-needs-partials"
+import MethodSectionSteps from "../components/methods/section-steps"
+import MethodSectionTips from "../components/methods/section-tips"
+import MethodSectionResources from "../components/methods/section-resources"
+
+export const currentMethod = uxMethods.surveys_qualitative
+
+import SEO from "../components/seo"
+
+<MethodLayout pageTitle={props.pageContext.frontmatter.title} method={currentMethod}>
+  <SEO title={props.pageContext.frontmatter.title} />
+  <MethodSectionIntro>
+    <p>Before we talk about Qualitative Surveys, it’s important to know what Surveys are in general.</p>
+    <p>Surveys are questions, often bundled in sets, that are distributed to users so they can answer questions about their behavior, background, or opinions. Surveys are typically unmoderated, quick, cheap, and a relatively easy way to get responses from a large sample size of your users with less effort than a full out Usability Test. You can also distribute them in a variety of ways. Surveys can be quantitative, qualitative, or a mix of both.</p>
+    <p>For this method, we are going to talk about Qualitative Surveys, but you can find information on Quantitative Surveys <Link to="/surveys-quantitative">here</Link>.</p>
+  </MethodSectionIntro>
+<MethodSectionWhatIs method={currentMethod} title="What is a Qualitative Survey?">
+  <p>
+    Qualitative Surveys are focused on providing context into your user’s behaviour and actions. They give you insight into why particular trends exist in your quantitative data and can unlock insights that you may not have anticipated. They also require a much smaller sample size than Quantitative Surveys.
+  </p>
+  <p>
+    Since they contain open-ended questions, every answer can be unique. This makes Qualitative Surveys much harder to analyze and compile. Eventually though, you can break down the responses into overall insights or themes, and start seeing some patterns which can turn into actionable insights.
+  </p>
+</MethodSectionWhatIs>
+
+<MethodSectionNeeds title="What do you need for a Qualitative Survey?">
+  <MethodSectionNeedsPartial type="time">
+    <ul>
+      <li>15 minutes to a few hours to create a proper survey</li>
+      <li>
+        Time to collect responses, which will vary drastically depending on the
+        method you choose. For example, surveys after Usability Tests will yield
+        immediate results, while emailed surveys may take a few weeks to collect
+        enough data.
+      </li>
+    </ul>
+  </MethodSectionNeedsPartial>
+  <MethodSectionNeedsPartial type="materials">
+    <ul>
+      <li>A survey creation tool</li>
+      <li>
+        A method to deliver the survey, usually found in the same survey
+        creation tool.
+      </li>
+    </ul>
+  </MethodSectionNeedsPartial>
+</MethodSectionNeeds>
+
+<MethodSectionSteps
+  method={currentMethod}
+  title="How do you conduct a Qualitative Survey?"
+>
+  <ol>
+    <li>
+      <h3>Step 1: Understand the goals</h3>
+      You need to first decide what you’re trying to get out of this survey. Are
+      you trying to report to your stakeholders on where users find the most value
+      in your product and why? Or are you trying to surface to your team where users
+      are struggling the most and why? Or are you trying to determine what new features
+      to consider next for your road map and strategic planning? Solidifying this
+      will allow you to better tailor a Qualitative Survey to achieve your goals.
+    </li>
+    <li>
+      <h3>Step 2: Decide on your target audience</h3>
+      <p>
+        Part of understanding your goals is also understanding who you want to
+        collect this feedback from. For example, you may know that you’re seeing
+        an increase in users leaving your product after 3 months, so you may
+        want to target those approaching the 3 month mark. Or you may know that
+        there is a big drop off during the third step of the account creation
+        flow, so you may want to target users as they leave that flow. Maybe you
+        just want some feedback from a specific demographic as you’re planning
+        on designing a new feature for them. All of this can affect the way you
+        shape the questions or determine the right method of delivery.
+      </p>
+    </li>
+    <li>
+      <h3>Step 3: Choose how to distribute the survey</h3>
+      <p>
+        Now you need to decide on how you’re going to get this feedback from
+        your target audience. The most popular methods are through a short
+        intercept survey on a live website, via email, or after a usability
+        test.
+      </p>
+      <p>
+        Depending on your goals and the audience you chose, some distribution
+        methods may make more sense than others. For example, if you’re
+        targeting users that spend most of their time in a specific part of your
+        product, you may be able to get a list of those users and send them
+        several questions via a mass email, or you may be able to set a trigger
+        in your product that prompts them with an intercept survey the moment
+        they re-enter that part of your product again.
+      </p>
+      <p>
+        It’s also important to consider distribution before you write the
+        questions because it could affect the way you approach your questions.
+        For example, if you plan on having them complete this survey after a
+        Usability Test, then you may be able to get away with asking more
+        questions than the other methods of distribution since the participant
+        understands they are already there to give feedback.
+      </p>
+    </li>
+    <li>
+      <h3>Step 4: Prepare the questions</h3>
+      <p>
+        Questions in Qualitative Surveys are Open-Ended Questions. These are
+        questions that are answered in depth without being limited by a distinct
+        set of predefined responses (like multiple choice, ratings, scales, or
+        yes/no responses).
+      </p>
+      <p>
+        To write these questions, take your goals and see if you can turn them
+        into questions. Try keeping them general, and not too specific, as that
+        will avoid leading questions.
+      </p>
+      <p>
+        <strong>Some examples of qualitative questions are:</strong>
+      </p>
+      <ul>
+        <li>What did you like about this feature, and why?</li>
+        <li>
+          What feature would you like to see next in our product, and why?
+        </li>
+        <li>Where do you find the most value in our product, and why?</li>
+        <li>Where in our product are you struggling the most, and why?</li>
+      </ul>
+      <p>
+        Asking “why?” after each question encourages participants to elaborate.
+      </p>
+    </li>
+    <li>
+      <h3>Step 5: Send the survey to your audience</h3>
+      At this point you have your goals, your target audience, the method of distribution,
+      and your refined questions. Now you’re ready to send it out, but just make
+      sure you give enough time to collect the results.
+    </li>
+    <li>
+      <h3>Step 6: Analyse the responses</h3>
+      <p>
+        Depending on what you’re researching, sample sizes in Qualitative
+        Surveys can be much smaller than in Quantitative Surveys because they
+        can surface obvious issues with only a few responses. For example, you
+        only need a handful of people to tell you that your profile creation
+        process is missing a “photo upload” feature, and is something they want
+        included.
+      </p>
+      <p>
+        You may get a lot of responses, and each response may also vary
+        drastically in length since some participants may have more to share
+        than others. Though this may be hard to analyse, it also results in a
+        wider range of feedback and unlocked insights, which can then give you
+        and your team plenty to work with and to plan around.
+      </p>
+      <p>
+        Unfortunately, there aren’t many great tools that can help you analyse
+        this information at the same speed and accuracy as you can with
+        Quantitative Surveys, but tools like AirTable do allow you to compile
+        and store it, then break the information into themes and patterns that
+        you can cross reference with other research projects. It’s still
+        lengthy, but if set up well from the start, it’s a great tool for a
+        qualitative feedback repository.
+      </p>
+    </li>
+    <li>
+      <h3>Step 7: Report and share</h3>
+      <p>
+        Finally, turn this into an easy-to-digest report and share it with your
+        team and stakeholders. Make sure to include the main insights at the
+        top, and make sure to explain why this data is useful and what you plan
+        on doing with it next. You can even debrief with your team or
+        stakeholders and you can start coming up with plans on how to address
+        those insights you collected.
+      </p>
+    </li>
+  </ol>
+</MethodSectionSteps>
+
+<MethodSectionTips
+  method={currentMethod}
+  title="Tips for a great Qualitative Survey"
+>
+  <ul>
+    <li>
+      It is very common to send out surveys that have a mix of both quantitative
+      and qualitative questions. Just remember that the longer your survey is,
+      the less likelihood that participants will complete it, so make sure your
+      questions are deliberate and necessary to achieve your goals.
+    </li>
+    <li>
+      If you’re going to do a mix of qualitative and quantitative questions,
+      consider adding logic in your survey to trigger qualitative input boxes.
+      For example, if they do respond with a 1/10 for satisfaction, you can
+      trigger an input box and ask them why they rated it so low.
+    </li>
+    <li>
+      Don’t make your surveys long! Generally, the longer the survey, the less
+      chance a participant will complete. They may not even start it if it looks
+      too long to begin with.
+    </li>
+    <li>
+      <p>
+        If you can, start out general then work your way towards more specific
+        questions tailored to your goals.
+      </p>
+      <p>For example:</p>
+      <ul>
+        <li>Question 1: What would you like us to improve, and why?</li>
+        <li>
+          Question 2: What part of the setup flow would you like us to improve,
+          and why?
+        </li>
+      </ul>
+      <p>
+        With Question 1, they may tell you ten things they want improved, none
+        of which are the setup flow. General questions like these really help us
+        understand what’s on the top of mind for our users and may unlock deeper
+        insights, while questions like the second one may be more suited for our
+        current goals. Keep in mind, the more questions on a survey, the less
+        chance participants will complete it, so use your best judgement.
+      </p>
+    </li>
+    <li>
+      If you can, first test your survey with a small sample size to gauge your
+      response rates. If response rates are low, consider iterating on the
+      questions.
+    </li>
+    <li>
+      If you’re looking for responses from a specific persona, you may want to
+      send out a few screener questions first. Then you can send out the actual
+      survey to anyone that meets your criteria, who should be more
+      representative of your target audience.
+    </li>
+  </ul>
+</MethodSectionTips>
+
+<MethodSectionResources method={currentMethod} />
+
+</MethodLayout>

@@ -1,0 +1,44 @@
+@import "styles/vars";
+
+footer {
+  background: $color-black;
+  color: $color-white;
+
+  img {
+    max-width: 100px;
+  }
+
+  .section__title {
+    color: $color-white;
+    font-size: $font-size-xl;
+    text-transform: uppercase;
+
+    @media #{$screen-sm} {
+      font-size: $font-size-lg;
+    }
+  }
+}
+
+.footer {
+  &__icons {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__link {
+    display: block;
+    margin: 10px 20px;
+
+    &:hover {
+      .footer__icon {
+        transform: scale(1.1, 1.1);
+      }
+    }
+  }
+
+  &__icon {
+    display: block;
+    height: 60px;
+    transition: all 0.2s ease;
+  }
+}

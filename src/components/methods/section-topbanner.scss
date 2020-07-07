@@ -1,0 +1,44 @@
+@import "../common/styles/vars";
+
+.method-layout {
+  section.single-page__header {
+    background-color: $color-primary;
+    background-blend-mode: luminosity;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      background: black;
+      opacity: 0.5;
+    }
+
+    .single-page__header__title {
+      line-height: 1.2;
+      text-align: left;
+      color: white;
+      position: relative;
+
+      @media #{$screen-md} {
+        font-size: 40px;
+      }
+
+      @media #{$screen-sm} {
+        font-size: 30px;
+      }
+    }
+
+    .single-page__header__subtitle {
+      margin-left: 4px;
+      color: white;
+      opacity: 0.8;
+      position: relative;
+    }
+  }
+}

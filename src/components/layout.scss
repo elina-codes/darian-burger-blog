@@ -1,0 +1,43 @@
+@import "common/styles/vars";
+
+section {
+  background-position: center center;
+  background-size: cover;
+  text-align: center;
+
+  &:nth-child(odd) {
+    background-color: $color-grey-light;
+  }
+}
+
+.section__title {
+  letter-spacing: 2px;
+  text-align: center;
+
+  + .section__description {
+    margin-bottom: 3em;
+  }
+}
+
+.wrapper {
+  max-width: $section-width;
+  padding: 40px 5%;
+  margin: 0 auto;
+
+  &--short {
+    padding: 40px 5%;
+  }
+
+  @media #{$screen-md-min} {
+    padding: 60px 5%;
+  }
+
+  @media #{$screen-lg-min} {
+    padding: 100px 5%;
+  }
+}
+
+.wrapper--narrow {
+  max-width: $content-width;
+  margin: 0 auto;
+}

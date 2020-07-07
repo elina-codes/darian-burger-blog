@@ -1,0 +1,258 @@
+@import url("//fonts.googleapis.com/css?family=Roboto+Slab:300,400,700|Patua+One&display=swap");
+@import "vars";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding-top: 60px;
+  transition: all 0.4s ease;
+  font-family: $font-family-main;
+  line-height: 1.5;
+  font-weight: 300;
+  color: $color-black;
+  font-size: $font-size-xxs;
+  background: $color-white;
+
+  @media #{$screen-sm} {
+    padding-top: 45px;
+    position: relative;
+
+    &.open-nav {
+      margin-left: 200px;
+      margin-right: -200px;
+    }
+  }
+
+  @media #{$screen-md-min} {
+    font-size: $font-size-xs;
+  }
+}
+
+h1,
+.h1 {
+  font-size: $font-size-huge;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: inherit;
+
+  @media #{$screen-xs} {
+    font-size: 50px;
+  }
+}
+// h2,
+// .h2 {
+//   font-size: $font-size-xl;
+//   font-weight: 500;
+//   margin-bottom: 0.8em;
+//   color: inherit;
+//   line-height: 1;
+
+//   @media #{$screen-xs} {
+//     font-size: $font-size-lg;
+//   }
+// }
+
+h2,
+.h2 {
+  font-size: $font-size-md;
+  font-weight: 400;
+  margin-bottom: 0.6em;
+  color: $color-grey-dark;
+  line-height: 1.2;
+
+  @media #{$screen-md-min} {
+    font-size: $font-size-lg;
+  }
+}
+
+h3,
+.h3 {
+  font-size: $font-size-xs;
+  font-weight: 400;
+  margin-bottom: 0.6em;
+  color: $color-grey-dark;
+  line-height: 1.2;
+
+  @media #{$screen-md-min} {
+    font-size: $font-size-sm;
+  }
+}
+
+h4,
+.h4 {
+  font-size: $font-size-md;
+  margin-bottom: 0;
+  line-height: 1.1;
+  color: $color-grey;
+  text-transform: uppercase;
+}
+h5,
+.h5 {
+  font-size: $font-size-md;
+  margin-bottom: 0;
+  line-height: 1.1;
+  color: $color-grey;
+  text-transform: uppercase;
+}
+h6,
+.h6 {
+  font-size: $font-size-xs;
+}
+
+h2,
+h3,
+h4,
+h5 {
+  font-family: $font-family-headings;
+  max-width: $content-width;
+  margin-left: auto;
+  margin-right: auto;
+
+  &.fullwidth {
+    max-width: none;
+  }
+}
+
+ul {
+  padding-left: 30px;
+  max-width: $content-width;
+  margin-left: auto;
+  margin-right: auto;
+
+  &:not(:last-child) {
+    margin-bottom: 2em;
+  }
+
+  &.fullwidth {
+    max-width: none;
+  }
+
+  li {
+    list-style-type: disc;
+
+    &:not(:last-child) {
+      margin-bottom: 0.5em;
+    }
+  }
+}
+
+ol {
+  max-width: $content-width;
+  margin-left: auto;
+  margin-right: auto;
+
+  &:not(:last-child) {
+    margin-bottom: 1em;
+  }
+
+  &.fullwidth {
+    max-width: none;
+  }
+
+  li {
+    &:not(:last-child) {
+      margin-bottom: 0.7em;
+    }
+  }
+}
+
+li + li h3 {
+  margin-top: 2em;
+}
+
+p {
+  max-width: 850px;
+  margin-left: auto;
+  margin-right: auto;
+
+  &:not(:last-child) {
+    margin-bottom: 1em;
+  }
+
+  + h3,
+  + .h3,
+  + h2,
+  + .h2 {
+    margin-top: 1em;
+  }
+}
+
+a {
+  color: $color-primary;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: 500;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.center {
+  text-align: center !important;
+}
+
+img.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.lowercase {
+  text-transform: lowercase !important;
+}
+
+.no-margin-bottom {
+  margin-bottom: 0 !important;
+}
+
+table {
+  border: 1px solid $color-grey;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background: $color-white;
+
+  thead {
+    background-color: $color-primary-light;
+    font-family: $font-family-headings;
+    text-transform: uppercase;
+    font-size: $font-size-md;
+    letter-spacing: 1px;
+  }
+
+  tbody {
+    tr {
+      &:not(:last-child) {
+        border-bottom: 1px solid $color-grey-light;
+      }
+    }
+  }
+
+  th,
+  td {
+    padding: 10px 20px;
+  }
+}
+
+img.icon {
+  display: inline-block;
+  margin-right: 10px;
+  fill: $color-primary-light;
+  height: 24px;
+  vertical-align: sub;
+  opacity: 0.4;
+}
+
+.hide {
+  display: none !important;
+}

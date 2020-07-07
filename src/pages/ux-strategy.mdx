@@ -1,0 +1,142 @@
+---
+path: "/ux-strategy"
+title: "UX Strategy"
+---
+
+import { Link } from "gatsby"
+
+import uxMethods from "../data/ux-methods"
+import MethodLayout from "../components/methods/layout-method"
+import MethodSectionWhatIs from "../components/methods/section-whatis"
+import MethodSectionNeeds from "../components/methods/section-needs"
+import MethodSectionNeedsPartial from "../components/methods/section-needs-partials"
+import MethodSectionSteps from "../components/methods/section-steps"
+import MethodSectionTips from "../components/methods/section-tips"
+import MethodSectionResources from "../components/methods/section-resources"
+
+export const currentMethod = uxMethods.ux_strategy
+
+import SEO from "../components/seo"
+
+<MethodLayout pageTitle={props.pageContext.frontmatter.title} method={currentMethod}>
+  <SEO title={props.pageContext.frontmatter.title} />
+
+<MethodSectionWhatIs method={currentMethod} title="What is a UX strategy?">
+  <p>
+    A UX strategy is the tailored plan and approach for a site or product. This
+    tailored plan consists of a carefully chosen collection of UX methods, put
+    together in a specific order, and adjusted to fit user needs, technical
+    constraints, and business goals. In short, it’s taking the UX methods listed
+    on this site and putting them in order.
+  </p>
+  <p>
+    Though that may sound easy, understanding which methods to include in a plan
+    only comes after enough understanding of each method, resources, budgets,
+    timelines, constraints, UX maturity at the company, and more. There is no
+    one way to determine a UX strategy, and each strategy may be different than
+    the last, which is why it can be difficult to pull off.
+  </p>
+  <p>
+    There are a lot of variables in forming the right UX strategy, and a well
+    thought-out UX strategy will help guide a team through the product life
+    cycle, with confidence that they are solving the right problems for their
+    users and the company, and in the right order.
+  </p>
+</MethodSectionWhatIs>
+
+<MethodSectionNeeds title="What do you need to create a UX strategy?">
+  <MethodSectionNeedsPartial type="time">
+    <ul>
+      <li>
+        It all depends on the level of UX Maturity at the company. A company with a low UX Maturity may require 6 months to a year before they have the proper processes and infrastructure in
+        place to determine, and act on, a UX strategy.
+      </li>
+      <li>Companies with a high UX Maturity may be able to create a proper plan in a few days or weeks.</li>
+    </ul>
+  </MethodSectionNeedsPartial>
+  <MethodSectionNeedsPartial type="materials">
+    <ul>
+      <li>At this point, it all depends on what you are comfortable with. Just understand what you’re trying to achieve and find the tools that will help facilitate that.</li>
+      <li>You may only need a word document and a spreadsheet, or you may need full whiteboards, stickies, sharpies, poster boards, etc..</li>
+    </ul>
+
+  </MethodSectionNeedsPartial>
+</MethodSectionNeeds>
+
+<MethodSectionSteps
+  method={currentMethod}
+  title="How do you create a UX strategy?"
+>
+<ol>
+  <li>
+    <h3>Step 1: Conduct a discovery session</h3>
+    <p>A discovery session is the first (and most important) meeting you are going to have with your stakeholders or client so you can better understand what it is that they are trying to do and why. It will cover the goals, requirements, justification for the work, deadlines, constraints, key contacts, and anything else that may give you a high-level understanding of the project.</p>
+    <p>In a discovery session, you will ask a series of questions whose answers will allow you to then tailor a precise UX strategy for the project, and set expectations about what you can reasonably deliver based on their requirements, timeframe, and constraints.</p>
+    <p><Link to="/discovery-session">You can view full details on how to run a discovery session here.</Link></p>
+  </li>
+  <li>
+    <h3>Step 2: Understand the gaps and assumptions</h3>
+    <p>From the discovery session, you will be able to identify any goals, user needs, and requirements that were based on assumptions. These can be considered gaps, and you need to make note of these as they will come back into play when you set your UX strategy.</p>
+  </li>
+  <li>
+    <h3>Step 3: Understand the constraints and risks</h3>
+    <p>Understanding your constraints like timeline, budget, resources, and technical
+    limitations should also help you identify risks, which can then help you refine the list of UX methods you add to your UX
+    Strategy. If it’s a tight timeline, you may need to find the balance of UX
+    methods that can be done quickly and that offer the biggest payoff. If your
+    resources or budget is a constraint, you may need to focus on cheaper UX methods. If the company plans on spending 2 years building this with 20 developers, that signifies a high risk, and you may need to propose more upfront, evaluative research methods before any design work is started.</p>
+    <p>Have a 30 minute meeting with the person that can help you understand the constraints.
+    That’s probably all you will need.</p>
+  </li>
+  <li>
+    <h3>Step 4: Create your UX strategy</h3>
+    <p>Now that you have a deep understanding of the goals, risks, requirements, gaps, assumptions, and constraints, you can finally (and confidently) choose which UX methods to include in your UX strategy, and in what order.</p>
+  
+    <p>Factor in everything we have covered and select the UX methods that can
+    feasibly be done within your timeline, that will fill the biggest gaps and assumptions, and reduce the most amount
+    of risk going forward with your project. Put them in a list, along with
+    the length of time it will take to complete each one.</p>
+    
+    <p>This is also where it gets tricky. UX is all about empowering confident decisions in design, but when forming a UX strategy, you need to weigh your confidence in the project against the consequences of failing.</p>
+    
+    <p>In general, if there are a lot of assumptions being made, and the consequences of failing are severe, then it is in your project’s best interest to add some UX methods towards validating those assumptions.</p>
+
+  <p>On another hand, if there are a lot of assumptions being made, but the consequences of failing are mild or lax, you may wish to go for more of a Lean UX strategy. This approach focuses on building something quickly based on those assumptions and including UX methods that can help validate it quickly after it has been released.</p>
+
+  <p>Remember, some methods may be quick to do, but other, longer methods may lower your risk more and provide you and your stakeholders with more confidence. You need to understand these trade-offs, and more importantly, be able to communicate them to your stakeholders in a professional manner. Which brings us to the next step.</p>
+  </li>
+  <li>
+    <h3>Step 5: Review your UX strategy and make adjustments</h3>
+    <p>Now that you have your proposed list of methods that form your UX strategy, review it with your stakeholders
+    or client. You may have to make some trade-offs and adjustments, which
+    is why you need a deep understanding of the pros and cons of each UX method
+    you’re suggesting.</p>
+  </li>
+  <li>
+    <h3>Step 6: Start work on your plan</h3>
+    <p>Once you have finalized your list, you can now start at the top and work your
+    way down. Good luck!</p>
+  </li>
+</ol>
+</MethodSectionSteps>
+
+<MethodSectionTips method={currentMethod} title="Tips for a great UX strategy">
+<ul>
+  <li>
+    In order to select the best UX methods for the right circumstances, you
+    need a deep understanding of them.
+  </li>
+  <li>
+    If you are having trouble coming up with a proper strategy, enlist the
+    help from your manager or team.
+  </li>
+  <li>
+    Make sure your manager is looped into your strategy, as once work begins on it, they may be able
+    to help shuffle resources around to help you out.
+  </li>
+</ul>
+</MethodSectionTips>
+
+<MethodSectionResources method={currentMethod} />
+
+</MethodLayout>

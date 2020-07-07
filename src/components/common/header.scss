@@ -1,0 +1,78 @@
+@import "styles/vars";
+
+header {
+  background: $color-white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-bottom: 1px solid $color-grey-light;
+  z-index: 9;
+  height: 45px;
+
+  @media #{$screen-sm-min} {
+    height: 60px;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-around;
+    text-transform: uppercase;
+    font-weight: 400;
+    height: 100%;
+    max-width: $section-width;
+    font-family: $font-family-headings;
+    font-size: 4.5vw;
+    line-height: 45px;
+
+    @media #{$screen-sm-min} {
+      letter-spacing: 3px;
+      font-size: $font-size-xs;
+      justify-content: flex-start;
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      color: inherit;
+      padding: 10px 15px;
+
+      @media #{$screen-sm-min} {
+        padding: 10px 30px;
+      }
+
+      span {
+        display: inline-block;
+        position: relative;
+        &:before {
+          content: "";
+          width: calc(100% + 8px);
+          border-top: 14px solid $color-primary-light;
+          position: absolute;
+          z-index: -1;
+          left: -4px;
+          transition: all 0.2s ease;
+          transform: skew(-6deg, -6deg);
+          opacity: 0;
+          bottom: 15px;
+
+          @media #{$screen-sm-min} {
+            width: calc(100% + 10px);
+            transform: skew(-8deg, -8deg);
+            left: -7px;
+            bottom: 0.8em;
+          }
+        }
+      }
+
+      &.active,
+      &:hover,
+      &:focus {
+        span:before {
+          content: "";
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

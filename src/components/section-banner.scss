@@ -1,0 +1,77 @@
+@import "./common/styles/vars";
+
+section.banner {
+  background-image: url("../images/darian-sad.jpg");
+  background-color: $color-primary;
+  background-blend-mode: luminosity;
+  filter: FlipH;
+  min-height: calc(100vh - 308px);
+  color: $color-white;
+  text-align: center;
+  text-shadow: 1px 1px 12px rgba(black, 0.2);
+  position: relative;
+
+  @media #{$screen-sm} {
+    min-height: calc(100vh - 247px);
+  }
+
+  .wrapper {
+    padding: 30px 10%;
+    position: relative;
+    z-index: 1;
+
+    @media #{$screen-xs} {
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background: black;
+    opacity: 0.5;
+  }
+}
+
+.banner__title {
+  text-align: inherit;
+  margin-bottom: 0;
+  line-height: 1;
+  font-weight: 500;
+  color: inherit;
+
+  @media #{$screen-md} {
+    font-size: 5vw;
+  }
+
+  @media #{$screen-sm} {
+    font-size: $font-size-xl;
+  }
+}
+
+.banner__subtitle {
+  text-align: inherit;
+  line-height: 1;
+  font-weight: 100;
+  color: inherit;
+  margin-bottom: 0;
+  max-width: none;
+  margin-top: 0.5em;
+
+  @media #{$screen-md} {
+    font-size: $font-size-lg;
+  }
+
+  @media #{$screen-sm} {
+    font-size: $font-size-md;
+  }
+
+  @media #{$screen-xs} {
+    font-size: $font-size-sm;
+  }
+}

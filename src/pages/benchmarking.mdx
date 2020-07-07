@@ -1,0 +1,145 @@
+---
+path: "/benchmarking"
+title: "Benchmarking"
+---
+
+import { Link } from "gatsby"
+
+import uxMethods from "../data/ux-methods"
+import MethodLayout from "../components/methods/layout-method"
+import MethodSectionWhatIs from "../components/methods/section-whatis"
+import MethodSectionNeeds from "../components/methods/section-needs"
+import MethodSectionNeedsPartial from "../components/methods/section-needs-partials"
+import MethodSectionSteps from "../components/methods/section-steps"
+import MethodSectionTips from "../components/methods/section-tips"
+import MethodSectionResources from "../components/methods/section-resources"
+
+export const currentMethod = uxMethods.benchmarking
+
+import SEO from "../components/seo"
+
+<MethodLayout pageTitle={props.pageContext.frontmatter.title} method={currentMethod}>
+  <SEO title={props.pageContext.frontmatter.title} />
+
+<MethodSectionWhatIs method={currentMethod} title="What is Benchmarking?">
+  <p>
+    Benchmarking is a method that allows you to compare a standard set of metrics between two ultimate states of your product in order to gauge its relative performance. The two states compared are usually an earlier version of your product and the current version of your product.
+  </p>
+  <p>
+    Benchmarking is an essential part of a plan to systematically improve the user experience as it let’s you see whether design efforts actually made a quantifiable difference over time, which can then help you adjust your road map accordingly.
+  </p>
+  <p>
+    Benchmarking is also a great method for proving the return on investment (ROI) of your UX efforts. Once you have a measurable baseline of your existing product, any new work after that will make those numbers go either up or down, then you can combine that with how much effort it took you to achieve those numbers and put that all together in a cost/benefit analysis that can prove the ROI of your UX efforts.
+  </p>
+  <p>
+    Unlike other methods of research, Benchmarking is a form of Summative User Research, which describes how a complete design performs, opposed to Formative User Research, which informs how the design will evolve during the design process.
+    </p>
+    <p>
+    Traditionally, Benchmarking is often used to compare high-level business goals (like revenue, acquisition rates, etc ..), but it can also be used to measure the user experience of a product, which is what this method will be tailored for.
+    </p>
+</MethodSectionWhatIs>
+
+<MethodSectionNeeds title="What do you need for Benchmarking?">
+  <MethodSectionNeedsPartial type="time">
+    <ul>
+      <li>Anywhere from 15 minutes to several days. It depends on the method you choose to Benchmark.</li>
+    </ul>
+  </MethodSectionNeedsPartial>
+  <MethodSectionNeedsPartial type="materials">
+    <ul>
+      <li>Just your digital tools.</li>
+      <li>Access to your Analytics Data</li>
+      <li>A Survey tool</li>
+      <li>Any materials to conduct Usability Tests</li>
+    </ul>
+  </MethodSectionNeedsPartial>
+</MethodSectionNeeds>
+
+<MethodSectionSteps method={currentMethod} title="How do you Benchmark products?">
+  <ol>
+    <li>
+      <h3>Step 1: Choose what metrics to measure</h3>
+      <p>
+      In order to start Benchmarking some metrics, you need to lock down what you want to Benchmark first.
+      </p>
+      <p><strong>To do this, you may need to ask a few questions, such as:</strong></p>
+        <ul>
+          <li>What do your stakeholders value?</li>
+          <li>What does your team value?</li>
+          <li>What will be impacted with the next set of changes you make to the product?</li>
+          <li>What can you indirectly or directly connect to revenue or KPIs?</li>
+        </ul>
+      <p>
+      Answering these questions should give you a solid list of metrics to start with, but if you need more, I recommend looking at Google’s HEART Framework as well. It contains a lot of great UX metrics that you can use for Benchmarking your product’s UX.
+      </p>
+      <p><strong>Some examples of metrics you can measure are:</strong></p>
+        <ul>
+          <li>Specific feature usage metricse</li>
+          <li>Average number of sessions per user</li>
+          <li>Task completion rate</li>
+          <li>Time on task</li>
+          <li>Average number of errors per user</li>
+          <li>And many more…</li>
+        </ul>
+    </li>
+    <li>
+      <h3>Step 2: Decide how to measure them</h3>
+      <p>
+      So now that you know what you want to measure, you have to decide on the right method to measure it all. There are multiple UX Methods to help with Benchmarking, so you have to find the ones that make sense for you and your project. To do this, you can look at which methods will fit within your schedule, your skillset, the tools available to you, and your budget, then make an educated decision on what will work best.
+      </p>
+      <p><strong>Some common methods for Benchmarking are:</strong></p>
+        <ul>
+          <li><strong>Quantitative Usability testing</strong> - This method will help you collect metrics that describe the user’s experience and performance within specific, controlled tasks. You can run the same tasks on your current product, then the new version of it to compare the differences in the results. Quantitative Usability Tests can be time consuming and hard to get a good sample size, but they can also be combined with surveys to collect both quantitative and qualitative metrics for comparison.</li>
+          <li><strong>Analytics data</strong> - This method is all about collecting raw quantitative data on how your product is being used by your users. If set up properly, you can quickly track almost everything that happens within your product, then look at that data again after you have made some changes to your product. This can be a cheap way to Benchmark, but it will not give you much context.</li>
+          <li><strong>Hybrid Analytics data</strong> - If you’re looking for more context behind some of your analytics data, there are many tools out there that allow you to watch recorded video sessions of your users interacting with your product. Most of these tools allow you to filter down based on standard analytics data, and the video recordings can provide you with additional context. For example, you can filter down to find out how many people are triggering errors in your checkout flow, then watch the videos to find out more details on what they are doing to trigger that error. This is a good method for precision Benchmarking, since you can then separate the different ways users can trigger that error, Benchmark them, and measure your changes against those Benchmarks later.</li>
+          <li><strong>Quantitative Surveys</strong> - For Quantitative Surveys, users are all asked the same, close-ended questions about their behavior, background, or opinions. The data can then be Benchmarked and compared against the data from the next time you run that same Survey. Surveys are a great method for Benchmarking because they allow you to get responses from a large sample size with less effort than full out Usability Tests, but they are harder to get context and can fall victim to Response or Recency Bias.</li>
+        </ul>  
+    </li>
+    <li>
+      <h3>Step 3: Collect your first measurement</h3>
+      Now that you have decided on the method you will use to Benchmark your product’s user experience, you can collect your first measurement. Go through your chosen method and document the results. Now you have a Benchmark, but you’re only halfway there!
+    </li>
+    <li>
+      <h3>Step 4: Make some changes to your product</h3>
+      <p>Now that you have your Benchmark data, you need to make some changes to your product so you can take a second measurement and compare it to that Benchmark. For the most accurate results, make controlled changes and try not to make too many changes at once, otherwise it may be tough to correlate your changes to specific metrics.
+      </p>
+    </li>
+    <li>
+      <h3>Step 5: Collect your second measurement</h3>
+      Once you have made some changes to your product, you can collect another round of data using the same method you used for your Benchmark. Different methods may require different amounts of time before you can collect your second round of data, so keep that in mind. For example, Usability Tests can be done immediately, but Analytics data may need a few weeks to populate enough measurable data.
+    </li>
+    <li>
+      <h3>Step 6: Compare and calculate ROI</h3>
+      <p>
+        At this point you have your original Benchmarked data, and the new data after your changes have been made. Now you should be able to easily see the difference between the two and can understand how the changes you made are affecting your product’s user experience.
+        </p>
+        <p>
+        To take it one step further, you can take the difference in the metrics and factor in the cost/effort it took for you to achieve that, and then you can determine the ROI of your UX efforts. If you’re a User Experience Designer having trouble getting buy-in for UX, this is probably the greatest benefit of Benchmarking.
+        </p> 
+    </li>
+  </ol>
+</MethodSectionSteps>
+
+<MethodSectionTips method={currentMethod} title="Tips for a great Benchmark">
+  <ul>
+    <li>
+      Track everything - Analytics data can be set up easily and, if you’re storing it, you can always go back to look at data from previous versions of your product. This can help you retroactively Benchmark your product’s UX. If you need help with this, make friends with your Business Intelligence team or take a Data Analyst out for a beer and ask them for help.
+    </li>
+    <li>
+      If you plan on using Google’s HEART framework, keep in mind that Happiness is more of an objective metric and harder to Benchmark, therefore, should be paired with other metrics, like Engagement or Retention to make it more meaningful.
+    </li>
+    <li>
+      Try to prioritize measuring UX metrics that can be tied to your company’s Key Performance Indicators (KPIs), either directly or indirectly. That will really help you prove the ROI of your UX efforts and will go a long way with your Executive Team.
+    </li>
+    <li>
+      After your first measurement, share the results with your team and tell them you will be using this data as a Benchmark. It will get everyone more invested when you present the next round of results to them.
+      </li>
+    <li>
+      If you don’t have an existing product to Benchmark, Quantitative Usability Tests can work well for Benchmarking your competitors. There are also many sites out there that have Industry Benchmark data that you can use to compare against your new product when released.
+      </li>
+  </ul>
+</MethodSectionTips>
+
+<MethodSectionResources method={currentMethod} />
+
+</MethodLayout>
