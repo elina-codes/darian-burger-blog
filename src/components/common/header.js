@@ -1,31 +1,28 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
+import { Link } from 'gatsby';
+import PropTypes from 'prop-types';
+import React from 'react';
 
-import "./header.scss"
+import './header.scss';
 
 const Header = ({ siteTitle }) => (
   <header>
     <nav id="js--mobile-nav">
       <Link to="/" className="active">
-        <span>UX Methods</span>
+        <span>Burger Reviews</span>
       </Link>
-      <a href="https://portfolio.ux-everything.com">
-        <span>Portfolio</span>
-      </a>
       <a href="#contact">
         <span>Contact</span>
       </a>
     </nav>
   </header>
-)
+);
 
 Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
+  siteTitle: PropTypes.string
+};
 
 Header.defaultProps = {
-  siteTitle: ``,
-}
+  siteTitle: ``
+};
 
-export default Header
+export default Header;

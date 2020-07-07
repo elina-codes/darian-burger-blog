@@ -1,1 +1,11 @@
-{"componentChunkName":"component---src-pages-paper-prototype-mdx","path":"/paper-prototype/","webpackCompilationHash":"","result":{"pageContext":{"isCreatedByStatefulCreatePages":true,"frontmatter":{"path":"/paper-prototype","title":"Paper Prototype"}}}}
+{
+  "componentChunkName": "component---src-pages-post1-mdx",
+  "path": "/post1/",
+  "webpackCompilationHash": "",
+  "result": {
+    "pageContext": {
+      "isCreatedByStatefulCreatePages": true,
+      "frontmatter": { "path": "/post1", "title": "Paper Prototype" }
+    }
+  }
+}

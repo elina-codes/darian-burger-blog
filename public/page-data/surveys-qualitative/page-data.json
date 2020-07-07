@@ -1,1 +1,11 @@
-{"componentChunkName":"component---src-pages-surveys-qualitative-mdx","path":"/surveys-qualitative/","webpackCompilationHash":"","result":{"pageContext":{"isCreatedByStatefulCreatePages":true,"frontmatter":{"path":"/surveys-qualitative","title":"Qualitative Surveys"}}}}
+{
+  "componentChunkName": "component---src-pages-post2-mdx",
+  "path": "/post2/",
+  "webpackCompilationHash": "",
+  "result": {
+    "pageContext": {
+      "isCreatedByStatefulCreatePages": true,
+      "frontmatter": { "path": "/post2", "title": "Qualitative Surveys" }
+    }
+  }
+}

@@ -1,4 +1,4 @@
-@import "common/styles/vars";
+@import 'common/styles/vars';
 
 // grid layout
 .grid {
@@ -10,7 +10,7 @@
     color: inherit;
   }
 
-  // grid layout for work and ux-methods
+  // grid layout for work and blog reviews
   &.image__grid {
     @media #{$screen-md} {
       grid-template-columns: 1fr 1fr;
