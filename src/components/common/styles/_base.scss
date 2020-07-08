@@ -259,6 +259,10 @@ img.icon {
   height: 28px;
   vertical-align: sub;
   opacity: 0.8;
+
+  &.icon--small {
+    height: 24px;
+  }
 }
 
 .hide {

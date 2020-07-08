@@ -1,4 +1,4 @@
-@import "styles/vars";
+@import 'styles/vars';
 
 header {
   background: $color-white;
@@ -36,42 +36,28 @@ header {
       align-items: center;
       color: inherit;
       padding: 10px 15px;
+      transition: all 0.2s ease;
 
       @media #{$screen-sm-min} {
         padding: 10px 30px;
       }
 
+      img {
+        transition: all 0.2s ease;
+      }
+
       span {
         display: inline-block;
         position: relative;
-        &:before {
-          content: "";
-          width: calc(100% + 8px);
-          border-top: 14px solid $color-primary-light;
-          position: absolute;
-          z-index: -1;
-          left: -4px;
-          transition: all 0.2s ease;
-          transform: skew(-6deg, -6deg);
-          opacity: 0;
-          bottom: 15px;
-
-          @media #{$screen-sm-min} {
-            width: calc(100% + 10px);
-            transform: skew(-8deg, -8deg);
-            left: -7px;
-            bottom: 0.8em;
-          }
-        }
       }
 
       &.active,
       &:hover,
       &:focus {
-        span:before {
-          content: "";
-          opacity: 1;
+        img {
+          transform: translateY(-3px);
         }
+        color: $color-secondary;
       }
     }
   }

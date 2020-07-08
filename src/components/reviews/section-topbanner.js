@@ -8,7 +8,7 @@
 import React from 'react';
 
 import './section-topbanner.scss';
-import bannerBg from '../../images/reviews/burger3.jpg';
+import bannerBg from '../../images/reviews/burger2.jpg';
 
 const ReviewLayout = ({ pageTitle }) => {
   return (

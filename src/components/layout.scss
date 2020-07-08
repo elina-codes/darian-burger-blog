@@ -1,4 +1,4 @@
-@import "common/styles/vars";
+@import 'common/styles/vars';
 
 section {
   background-position: center center;
@@ -16,6 +16,13 @@ section {
 
   + .section__description {
     margin-bottom: 3em;
+  }
+
+  .heading-icon {
+    height: 50px;
+    transform: rotate(-15deg);
+    display: inline-block;
+    margin-right: 0.4em;
   }
 }
 

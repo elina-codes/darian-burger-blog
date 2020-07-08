@@ -7,8 +7,8 @@ import './header.scss';
 const Header = ({ siteTitle }) => (
   <header>
     <nav id="js--mobile-nav">
-      <Link to="/" className="active">
-        <span>Burger Reviews</span>
+      <Link to="/">
+        <span>Reviews</span>
       </Link>
       <a href="#contact">
         <span>Contact</span>
