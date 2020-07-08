@@ -34,9 +34,11 @@ const reviews = {
     ratings: {
       appearance: 10,
       taste: 8,
+      mouthfeel: 8,
       mess: 7,
       fries: 8,
-      price: 7
+      price: 7,
+      leftovers: 5
     }
   },
   review2: {
@@ -59,8 +61,10 @@ const reviews = {
     ratings: {
       appearance: 10,
       taste: 10,
+      mouthfeel: 10,
       mess: 10,
-      price: 10
+      price: 10,
+      leftovers: 10
     }
   },
   review3: {
@@ -83,9 +87,11 @@ const reviews = {
     ratings: {
       appearance: 8,
       taste: 8,
+      mouthfeel: 7,
       mess: 5,
       fries: 7,
-      price: 5
+      price: 5,
+      leftovers: 2
     }
   }
 };
