@@ -40,7 +40,7 @@ export const ratingsNamesAndValues = (ratings, includeIcons) => {
       iconsArray.push(ratingIconsMap.get(key));
     }
 
-    ratingsArray.push(`${key}: ${value}`);
+    ratingsArray.push(`${key}: ${value}/10`);
   }
 
   return [ratingsArray, iconsArray];
@@ -54,9 +54,13 @@ export const ratingsList = (ratings, includeIcons) => {
   const ratingsTypes = ratingsData[0];
   const ratingsIcons = ratingsData[1];
 
-  return ratingsTypes.map((rating, i) => (
-    <li className="capitalize">
-      <img src={ratingsIcons[i]} className="icon" /> {rating}
-    </li>
-  ));
+  return (
+    <ul className="unstyled">
+      {ratingsTypes.map((rating, i) => (
+        <li className="capitalize">
+          <img src={ratingsIcons[i]} className="icon" /> {rating}
+        </li>
+      ))}
+    </ul>
+  );
 };

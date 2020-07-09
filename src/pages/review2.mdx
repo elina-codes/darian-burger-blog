@@ -23,11 +23,7 @@ import SEO from "../components/seo"
   <SEO title={props.pageContext.frontmatter.title} />
   <ReviewSectionIntro>
     <p>Before we talk about Qualitative Surveys, it’s important to know what Surveys are in general.</p>
-    <p>
-      <ul className="unstyled">
-        {ratingsList(currentReview.ratings, true)}
-      </ul>
-    </p>
+    <p>{ratingsList(currentReview.ratings, true)}</p>
     <p><strong>Average score: {averageRating(currentReview.ratings)}</strong></p>
   </ReviewSectionIntro>
 <ReviewSectionWhatIs review={currentReview} title="What is a Qualitative Survey?">

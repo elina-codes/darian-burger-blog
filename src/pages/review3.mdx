@@ -22,11 +22,7 @@ export const currentReview = reviews.review3
 <ReviewLayout pageTitle={props.pageContext.frontmatter.title} review={currentReview}>
   <SEO title={props.pageContext.frontmatter.title} />
   <ReviewSectionIntro>
-    <p>
-      <ul className="unstyled">
-        {ratingsList(currentReview.ratings, true)}
-      </ul>
-    </p>
+    <p>{ratingsList(currentReview.ratings, true)}</p>
     <p><strong>Average score: {averageRating(currentReview.ratings)}</strong></p>
   </ReviewSectionIntro>
 
