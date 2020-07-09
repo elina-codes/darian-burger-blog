@@ -16,7 +16,7 @@ const IndexPage = () => (
           <img src={burger} className="heading-icon" />
           Blogs Burgers
         </h1>
-        <p className="section__description">Burger reviews</p>
+        <p className="section__description">Finding the best burger in Vancouver</p>
         <GridLayout gridItems={reviews} />
       </div>
     </section>
